@@ -16,11 +16,11 @@ class PenteTest(unittest.TestCase):
 
     def test_nonzero_is_invalid_move(self):
         start = [[1,0],[0,0]]
-        self.assertFalse(is_valid(start, (0, 0)))
+        self.assertFalse(valid_move(start, (0, 0)))
 
     def test_zero_is_valid_move(self):
         start = [[1,0],[0,0]]
-        self.assertTrue(is_valid(start, (0, 1)))
+        self.assertTrue(valid_move(start, (0, 1)))
 
 if __name__ == '__main__':
     unittest.main()
