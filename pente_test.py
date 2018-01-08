@@ -22,5 +22,12 @@ class PenteTest(unittest.TestCase):
         start = [[1,0],[0,0]]
         self.assertTrue(valid_move(start, (0, 1)))
 
+    def test_five_in_a_row_false(self):
+        start = [[1, 0, 0, 0, 0]]
+        self.assertFalse(five(start))
+
+    def test_five_in_a_row_true(self):
+        start = [[1, 1, 1, 1, 1]]
+        self.assertTrue(five(start))
 if __name__ == '__main__':
     unittest.main()
