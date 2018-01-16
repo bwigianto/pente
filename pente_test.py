@@ -26,8 +26,17 @@ class PenteTest(unittest.TestCase):
         start = [[1, 0, 0, 0, 0]]
         self.assertFalse(five(start))
 
-    def test_five_in_a_row_true(self):
+    def test_five_horizontal(self):
         start = [[1, 1, 1, 1, 1]]
-        self.assertTrue(five(start))
+        self.assertTrue(five(start) == 1)
+
+    def test_five_vertical(self):
+        start = [[1], [1], [1], [1], [1]]
+        self.assertTrue(five(start) == 1)
+
+    def test_five_diagonal(self):
+        start = [[1,0,0,0,0], [0,1,0,0,0], [0,0,1,0,0], [0,0,0,1,0], [0,0,0,0,1]]
+        self.assertTrue(five(start) == 1)
+
 if __name__ == '__main__':
     unittest.main()
